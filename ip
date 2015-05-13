@@ -1,0 +1,1 @@
+ifconfig |grep 10.66.*|cut -d \  -f2

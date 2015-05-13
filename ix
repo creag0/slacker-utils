@@ -1,0 +1,8 @@
+#Script to allow for quickly exporting display by IP.
+
+#MYIP=`/Users/wcreager/bin/ip`
+MYIP=`ifconfig |grep 10.66.*|cut -d \  -f2`
+#echo $MYIP
+MYIP="export DISPLAY=$MYIP:0.0"
+echo $MYIP |pbcopy
+xhost + 

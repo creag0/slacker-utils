@@ -1,0 +1,6 @@
+echo Purging the ARP Cache 
+sudo arp -d -a 
+echo Purging DNS Resolver Cache
+dscacheutil -flushcache
+echo "Killing DNSResponder Task"
+sudo killall -HUP mDNSResponder
